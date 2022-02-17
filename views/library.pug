@@ -1,0 +1,10 @@
+extends layout
+
+block layout-content
+  h1.page-title #{title}
+  - var desc = library.querySelector("description").textContent;
+  - var address = library.querySelector("address").textContent;
+  - var phoneNumber = library.querySelector("phoneNumber").textContent;
+  p #{desc}
+  p #{address}
+  p #{phoneNumber}

@@ -1,0 +1,13 @@
+extends layout
+block layout-content
+  h1 Library Data
+  form(action="/libraries" method="get")
+    label(for="libraries") Choose a library:
+    br
+    br
+    select#libraries(name="libraries")
+      each library in libraries
+        option(value=library.getAttribute("id")) #{library.querySelector("name").textContent}
+    br
+    br
+    input(type="submit")
